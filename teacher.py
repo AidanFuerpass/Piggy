@@ -88,6 +88,41 @@ class PiggyParent(gopigo3.GoPiGo3):
         self.set_motor_power(self.MOTOR_LEFT, left)
         self.set_motor_power(self.MOTOR_RIGHT, right)
 
+    def turn_by_deg(self, deg):
+        # higher - ordered (more complex but easier to read)
+        
+        # get our current location
+        current = self.get_heading()
+        # calculate delta
+        goal = current + deg
+        if goal > 360: goal -= 360
+        elif goal < 0:
+            goal += 360
+        # call turn to deg on the delta
+        self.turn_to_deg(goal)
+        pass
+
+
+    def turn_to_deg(self, deg):
+       # lower - ordered (Batman)
+
+       # extra credit: turn left if it's more effecient 
+
+
+    
+       # while loop - keep turning until my gyro says I'm there
+
+       while abs(deg - self.get_heading()) > 5:
+           self.right(primary=60, counter=-60)
+        self.stop()
+        print("I think I turned correctly")
+       
+
+
+        pass
+
+
+
     def right(self, primary=90, counter=0):
         """Rotates right by powering the left motor to default"""
         self.set_motor_power(self.MOTOR_LEFT, primary)

@@ -54,15 +54,26 @@ class Piggy(PiggyParent):
     '''
 
     def dance(self):
+        self.chacha()
+        '''
         # HIGHER - ORDERED
         for x in range(3):
             self.dab()
             self.chacha()
             self.spin()
             self.moonwalk()
+        '''
 
     def chacha(self):
-        '''moving back and forth'''
+        self.right()
+        time.sleep(1)
+        self.back()
+        time.sleep(1)
+        self.left()
+        time.sleep(1)
+        self.back()
+        time.sleep(1)
+        self.stop()
 
     def spin(self):
         '''make a 360 degree turn'''

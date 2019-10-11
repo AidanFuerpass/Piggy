@@ -1,5 +1,6 @@
 from teacher import PiggyParent
 import sys
+import time
 
 class Piggy(PiggyParent):
 
@@ -65,14 +66,15 @@ class Piggy(PiggyParent):
         '''
 
     def chacha(self):
-        self.right()
+        self.turn_to_deg(45)
         time.sleep(1)
         self.back()
         time.sleep(1)
-        self.left()
+        self.turn_to_deg(-45)
         time.sleep(1)
         self.back()
         time.sleep(1)
+        self.forward()
         self.stop()
 
     def spin(self):

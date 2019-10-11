@@ -79,6 +79,48 @@ class PiggyParent(gopigo3.GoPiGo3):
         self.offset_motor_encoder(self.MOTOR_RIGHT, self.get_motor_encoder(self.MOTOR_RIGHT))
         self.set_motor_position(self.MOTOR_LEFT + self.MOTOR_RIGHT, deg)
 
+    def turn_by_deg(self, deg):
+        """Rotates robot relative to it's current heading. If told -20, it
+        will rotate left by 20 degrees."""
+
+        # get our current angle
+        current = self.get_heading()
+
+        # calculate delta
+        goal = current + deg
+
+        # LOOP AROUND THE 360 marker
+        goal %= 360
+
+        # call turn to deg on the delta
+        self.turn_to_deg(goal)
+        
+
+    def turn_to_deg(self, deg):
+        """Turns to a degree relative to the gyroscope's readings. If told 20, it
+        will rotate until the gyroscope reads 20."""
+
+        # error check
+        goal = deg % 360
+        current = self.get_heading()
+
+        turn = self.right  # connect it to the method without the () to activate
+        if (current - goal > 0 and current - goal < 180) or \
+            (current - goal < 0 and (360 - goal) + current < 180):
+            turn = self.left
+
+        
+        # while loop - keep turning until my gyro says I'm there
+        while abs(deg - self.get_heading()) > 3:
+            turn(primary=70, counter=-70)
+
+        # once out of the loop, hit the brakes
+        self.stop()
+        # report out to the user
+        print("\n{} is close enough to {}.\n".format(self.get_heading(), deg))
+
+
+
     def fwd(self, left=50, right=50):
         """Blindly charges your robot forward at default power which needs to be configured in child class"""
         if self.LEFT_DEFAULT and left == 50:
@@ -87,41 +129,6 @@ class PiggyParent(gopigo3.GoPiGo3):
             right = self.RIGHT_DEFAULT
         self.set_motor_power(self.MOTOR_LEFT, left)
         self.set_motor_power(self.MOTOR_RIGHT, right)
-
-    def turn_by_deg(self, deg):
-        # higher - ordered (more complex but easier to read)
-        
-        # get our current location
-        current = self.get_heading()
-        # calculate delta
-        goal = current + deg
-        if goal > 360: goal -= 360
-        elif goal < 0:
-            goal += 360
-        # call turn to deg on the delta
-        self.turn_to_deg(goal)
-        pass
-
-
-    def turn_to_deg(self, deg):
-       # lower - ordered (Batman)
-
-       # extra credit: turn left if it's more effecient 
-
-
-    
-       # while loop - keep turning until my gyro says I'm there
-
-       while abs(deg - self.get_heading()) > 5:
-           self.right(primary=60, counter=-60)
-        self.stop()
-        print("I think I turned correctly")
-       
-
-
-        pass
-
-
 
     def right(self, primary=90, counter=0):
         """Rotates right by powering the left motor to default"""

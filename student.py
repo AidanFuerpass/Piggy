@@ -56,6 +56,8 @@ class Piggy(PiggyParent):
 
     def dance(self):
         self.chacha()
+        self.spin()
+        self.dab()
         '''
         # HIGHER - ORDERED
         for x in range(3):
@@ -84,7 +86,10 @@ class Piggy(PiggyParent):
         self.stop()
 
     def dab(self):
-        '''head moves right while body moves left'''
+      self.turn_by_deg(70)
+      self.servo(1000)
+      self.turn_by_deg(-70)
+      self.servo(1000)
 
     def moonwalk(self):
         '''move slowly backwards'''

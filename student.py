@@ -74,11 +74,14 @@ class Piggy(PiggyParent):
         time.sleep(1)
         self.back()
         time.sleep(1)
-        self.forward()
+        self.fwd()
+        time.sleep(1)
         self.stop()
 
     def spin(self):
-        '''make a 360 degree turn'''
+        self.turn_by_deg(360)
+        time.sleep(1)
+        self.stop()
 
     def dab(self):
         '''head moves right while body moves left'''

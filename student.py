@@ -69,15 +69,15 @@ class Piggy(PiggyParent):
 
     def chacha(self):
         self.turn_by_deg(45)
-        time.sleep(1)
+        time.sleep(.50)
         self.fwd()
-        time.sleep(1)
+        time.sleep(.50)
         self.turn_by_deg(-45)
-        time.sleep(1)
+        time.sleep(.50)
         self.fwd()
-        time.sleep(1)
+        time.sleep(.50)
         self.back()
-        time.sleep(1)
+        time.sleep(.50)
         self.stop()
 
     def spin(self):

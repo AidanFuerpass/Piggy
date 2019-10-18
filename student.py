@@ -55,9 +55,10 @@ class Piggy(PiggyParent):
     '''
 
     def dance(self):
-        self.dab()
-        self.spin()
-        self.chacha()
+        for x in range(3): 
+            self.dab()
+            self.spin()
+            self.chacha()
     
         '''
         # HIGHER - ORDERED

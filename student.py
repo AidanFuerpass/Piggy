@@ -58,6 +58,7 @@ class Piggy(PiggyParent):
         self.chacha()
         self.spin()
         self.dab()
+    
         '''
         # HIGHER - ORDERED
         for x in range(3):
@@ -66,7 +67,12 @@ class Piggy(PiggyParent):
             self.spin()
             self.moonwalk()
         '''
-
+    def dab(self):
+        self.turn_by_deg(60)
+        self.servo(2000)
+        self.turn_by_deg(-60)
+        self.servo(1500)
+    
     def chacha(self):
         self.turn_by_deg(45)
         time.sleep(.50)
@@ -95,16 +101,7 @@ class Piggy(PiggyParent):
         time.sleep(1)
         self.stop()
 
-    def dab(self):
-      self.turn_by_deg(70)
-      time.sleep(.50)
-      self.servo(1000)
-      time.sleep(.50)
-      self.turn_by_deg(-70)
-      time.sleep(.50)
-      self.servo(1000)
-      time.sleep(.50)
-      self.stop()
+    
 
     def stoopid(self):
         self.turn_by_deg(70)
@@ -120,6 +117,8 @@ class Piggy(PiggyParent):
         self.fwd()
         time.sleep(.50)
         self.stop()
+
+    
 
 
     def scan(self):

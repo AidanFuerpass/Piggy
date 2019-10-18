@@ -100,14 +100,13 @@ class Piggy(PiggyParent):
         self.stop()
 
     def spin(self):
-         """crazy 360 spin"""   
+        """crazy 360 spin"""   
         self.turn_by_deg(360)
         time.sleep(1)
         self.stop()
 
     
-
-    def stoopid(self):
+     def stoopid(self):
         """goes absolutely crazy and doesn"t know what to do"""
         self.turn_by_deg(70)
         time.sleep(.50)

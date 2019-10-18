@@ -78,6 +78,16 @@ class Piggy(PiggyParent):
         time.sleep(.50)
         self.back()
         time.sleep(.50)
+        self.turn_by_deg(45)
+        time.sleep(.50)
+        self.fwd()
+        time.sleep(.50)
+        self.turn_by_deg(-45)
+        time.sleep(.50)
+        self.fwd()
+        time.sleep(.50)
+        self.back()
+        time.sleep(.50)
         self.stop()
 
     def spin(self):
@@ -87,12 +97,30 @@ class Piggy(PiggyParent):
 
     def dab(self):
       self.turn_by_deg(70)
+      time.sleep(.50)
       self.servo(1000)
+      time.sleep(.50)
       self.turn_by_deg(-70)
+      time.sleep(.50)
       self.servo(1000)
+      time.sleep(.50)
+      self.stop()
 
-    def moonwalk(self):
-        '''move slowly backwards'''
+    def stoopid(self):
+        self.turn_by_deg(70)
+        time.sleep(.50)
+        self.back()
+        time.sleep(.50)
+        self.turn_by_deg(-70)
+        time.sleep(.50)
+        self.fwd()
+        time.sleep(.50)
+        self.turn_by_deg(90)
+        time.sleep(.50)
+        self.fwd()
+        time.sleep(.50)
+        self.stop()
+
 
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""

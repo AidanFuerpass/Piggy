@@ -55,9 +55,9 @@ class Piggy(PiggyParent):
     '''
 
     def dance(self):
-        self.chacha()
-        self.spin()
         self.dab()
+        self.spin()
+        self.chacha()
     
         '''
         # HIGHER - ORDERED
@@ -68,12 +68,14 @@ class Piggy(PiggyParent):
             self.moonwalk()
         '''
     def dab(self):
+    """normal hyped dab"""
         self.turn_by_deg(60)
         self.servo(2000)
         self.turn_by_deg(-60)
         self.servo(1500)
     
     def chacha(self):
+    """makes crazy side turns"""
         self.turn_by_deg(45)
         time.sleep(.50)
         self.fwd()
@@ -97,6 +99,7 @@ class Piggy(PiggyParent):
         self.stop()
 
     def spin(self):
+     """crazy 360 spin"""   
         self.turn_by_deg(360)
         time.sleep(1)
         self.stop()
@@ -104,6 +107,7 @@ class Piggy(PiggyParent):
     
 
     def stoopid(self):
+    """goes absolutely crazy and doesn"t know what to do"""
         self.turn_by_deg(70)
         time.sleep(.50)
         self.back()

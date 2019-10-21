@@ -57,7 +57,9 @@ class Piggy(PiggyParent):
     def dance(self):
         for x in range(3): 
             self.dab()
+            time.sleep(.50)
             self.spin()
+            time.sleep(.50)
             self.chacha()
     
         '''

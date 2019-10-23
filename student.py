@@ -55,6 +55,13 @@ class Piggy(PiggyParent):
     '''
 
     def dance(self):
+       # check to see its safe
+        if not self.safe_to_dance()
+            print("Not cool, cant dance right now.")
+            return #closes down method
+        else:
+            print(I'm gonna dance.")
+        
         for x in range(3): 
             self.dab()
             time.sleep(.50)
@@ -62,6 +69,19 @@ class Piggy(PiggyParent):
             time.sleep(.50)
             self.chacha()
     
+    def safe_to_dance(self):
+        """ Does a 360 check and returns true if say"""
+        for x in range(4):
+            for ang in range(1000, 2001, 100):
+                self.servo(ang)
+                time.sleep(.1)
+                if self.read_distance() < 250:
+                    return False
+            self.turn_by_deg(90)
+        return True
+
+
+
         '''
         # HIGHER - ORDERED
         for x in range(3):

@@ -65,7 +65,7 @@ class Piggy(PiggyParent):
             self.dab()
             self.chacha()
             self.spin()
-            self.moonwalk()
+            self.stoopid()
         
     def safe_to_dance(self):
         """ Does a 360 check and returns true if say"""

@@ -55,12 +55,12 @@ class Piggy(PiggyParent):
     '''
 
     def dance(self):
-       # check to see its safe
-        if not self.safe_to_dance()
+        # check to see its safe
+        if not self.safe_to_dance():
             print("Not cool, cant dance right now.")
             return #closes down method
         else:
-            print(I'm gonna dance.")
+            print("I'm gonna dance.")
         
         for x in range(3): 
             self.dab()

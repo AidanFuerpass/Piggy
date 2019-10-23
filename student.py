@@ -58,7 +58,7 @@ class Piggy(PiggyParent):
         # check to see its safe
         if not self.safe_to_dance():
             print("Not cool, cant dance right now.")
-            return #closes down method
+            return # closes down method
         else:
             print("I'm gonna dance.")
         for x in range(3):
@@ -67,8 +67,6 @@ class Piggy(PiggyParent):
             self.spin()
             self.moonwalk()
         
-        
-    
     def safe_to_dance(self):
         """ Does a 360 check and returns true if say"""
         for x in range(4):
@@ -81,10 +79,6 @@ class Piggy(PiggyParent):
         return True
 
 
-
-        
-        # HIGHER - ORDERED
-        
 
     def dab(self):
         """normal hyped dab"""

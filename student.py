@@ -88,7 +88,7 @@ class Piggy(PiggyParent):
         self.servo(1500)
     
     def chacha(self):
-        """makes crazy side turns"""
+        """makes crazy side turns and back and forward movements"""
         self.turn_by_deg(45)
         time.sleep(.50)
         self.fwd()
@@ -112,7 +112,7 @@ class Piggy(PiggyParent):
         self.stop()
 
     def spin(self):
-        """crazy 360 spin"""   
+        """crazy 360 spins"""   
         self.turn_by_deg(180)
         self.turn_by_deg(180)
         self.turn_by_deg(-180)

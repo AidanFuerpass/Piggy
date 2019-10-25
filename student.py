@@ -57,7 +57,7 @@ class Piggy(PiggyParent):
     def dance(self):
         # check to see its safe
         if not self.safe_to_dance():
-            print("Not cool, cant dance right now.")
+            print("Not cool, cant drop my moves in that territory.")
             return # closes down method
         else:
             print("I'm gonna dance.")
@@ -113,8 +113,10 @@ class Piggy(PiggyParent):
 
     def spin(self):
         """crazy 360 spin"""   
-        self.turn_by_deg(360)
-        time.sleep(1)
+        self.turn_by_deg(180)
+        self.turn_by_deg(180)
+        self.turn_by_deg(-180)
+        self.turn_by_deg(-180)
         self.stop()
 
     

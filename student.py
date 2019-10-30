@@ -151,15 +151,15 @@ class Piggy(PiggyParent):
         trigger_distance = 250
         count = 0
         starting_position = self.get_heading()
-       self.right(primary=60, counter=-60) 
-       while self.get_heading() != startting_position:
-           if self.read_distance() < 250 and not found_something
-           found_something = True
-           count += 1
-           print("\n FOUND SOMETHING!!! \n")
-           elif self.read_distance()> 250 and found_something:
-               found_something = False
-               print("I have a clear view. Resetting my counter")
+        self.right(primary=60, counter=-60) 
+        while self.get_heading() != startting_position:
+            if self.read_distance() < 250 and not found_something
+                found_something = True
+                count += 1
+                print("\n FOUND SOMETHING!!! \n")
+            elif self.read_distance()> 250 and found_something:
+                found_something = False
+                print("I have a clear view. Resetting my counter")
         self.stop()
         print("I found this many things: %d" & count)
         return count
@@ -168,7 +168,7 @@ class Piggy(PiggyParent):
        return count
        
         print("I can't count how many obstacles are around me. Please give my programmer a zero.")
-
+ 
     def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")

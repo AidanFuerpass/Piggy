@@ -153,11 +153,11 @@ class Piggy(PiggyParent):
         starting_position = self.get_heading()
         self.right(primary=60, counter=-60) 
         while self.get_heading() != startting_position:
-            if self.read_distance() < 250 and not found_something
+            if self.read_distance() < 250 and not found_something:
                 found_something = True
                 count += 1
                 print("\n FOUND SOMETHING!!! \n")
-            elif self.read_distance()> 250 and found_something:
+            elif self.read_distance() > 250 and found_something:
                 found_something = False
                 print("I have a clear view. Resetting my counter")
         self.stop()

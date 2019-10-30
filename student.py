@@ -164,8 +164,7 @@ class Piggy(PiggyParent):
         print("I found this many things: %d" & count)
         return count
            
-        self.stop()
-       return count
+        
        
         print("I can't count how many obstacles are around me. Please give my programmer a zero.")
  

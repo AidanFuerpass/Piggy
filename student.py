@@ -176,6 +176,7 @@ class Piggy(PiggyParent):
         
         # TODO: build self.quick_check() that does a fast, 3-part check instead of read_distance
         while True:
+            self.servo(self.MIDPOINT)
             while self.read_distance() > 250:  # TODO: fix this magic number
                 self.fwd()
                 time.sleep(.01)

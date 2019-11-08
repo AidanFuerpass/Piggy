@@ -175,6 +175,7 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         
         # TODO: build self.quick_check() that does a fast, 3-part check instead of read_distance
+        corner_count = 0
         while True:
             self.servo(self.MIDPOINT)
             while self.read_distance() > 250:  # TODO: fix this magic number

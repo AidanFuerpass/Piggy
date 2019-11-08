@@ -185,7 +185,7 @@ class Piggy(PiggyParent):
             self.stop()
             self.scan()
             # traversal
-            corner count += 1
+            corner_count += 1
             if corner_count > 3:
             left_total = 0
             left_count = 0

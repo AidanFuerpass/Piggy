@@ -187,6 +187,7 @@ class Piggy(PiggyParent):
             # traversal
             corner_count += 1
             if corner_count > 3:
+                self.turn_by_deg(180)
             left_total = 0
             left_count = 0
             right_total = 0

@@ -185,8 +185,8 @@ class Piggy(PiggyParent):
             self.stop()
             self.scan()
             # traversal
-            corner_count += 1
-            if corner_count > 3:
+            corner_count += 1    
+            if corner_count > 3:     #after turning 3 times in a corner then does a 180 turn
                 self.turn_by_deg(180)
             left_total = 0
             left_count = 0

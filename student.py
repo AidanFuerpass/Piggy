@@ -178,11 +178,14 @@ class Piggy(PiggyParent):
         while True:
             self.servo(self.MIDPOINT)
             while self.read_distance() > 250:  # TODO: fix this magic number
+                corner count = 0
                 self.fwd()
                 time.sleep(.01)
             self.stop()
             self.scan()
             # traversal
+            corner count += 1
+            if corner_count > 3:
             left_total = 0
             left_count = 0
             right_total = 0

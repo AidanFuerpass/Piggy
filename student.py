@@ -169,7 +169,7 @@ class Piggy(PiggyParent):
         for ang in range(self.MIDPOINT-150, self.MIDPOINT+151, 150):
             self.servo(ang)
             if self.read_distance() < self.SAFE_DIST:
-            return False
+                return False
     
     #if i return tru i didnt find anything
     return True

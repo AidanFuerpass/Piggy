@@ -177,7 +177,7 @@ class Piggy(PiggyParent):
            
         
        
-        print("I can't count how many obstacles are around me. Please give my programmer an A+.")
+    print("I can't count how many obstacles are around me. Please give my programmer an A+.")
  
     def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")

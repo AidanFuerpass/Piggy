@@ -165,12 +165,20 @@ class Piggy(PiggyParent):
         print("I found this many things: %d" % count)
         return count 
 
+def quick_check(self):
+    #3 quick checks
+    for ang in range(self.MIDPOINT-150, self.MIDPOINT+151, 150):
+        self.servo(ang)
+        if self.read_distance() < self.SAFE_DIST:
+            return False
+        #if i get to the ned, i found nothing dangerous
+    return True
    
 
            
         
        
-    print("I can't count how many obstacles are around me. Please give my programmer an A+.")
+    print("I can count how many obstacles are around me. Please give my programmer an A+.")
  
     def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")

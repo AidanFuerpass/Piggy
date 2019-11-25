@@ -19,7 +19,7 @@ class Piggy(PiggyParent):
         self.LEFT_DEFAULT = 80
         self.RIGHT_DEFAULT = 80
         self.SAFE_DIST = 350
-        self.MIDPOINT = 1350  # what servo command (1000-2000) is straight forward for your bot?
+        self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
         self.load_defaults()
         
 
@@ -178,7 +178,7 @@ class Piggy(PiggyParent):
            
         
        
-    print("I can count how many obstacles are around me. Please give my programmer an A+.")
+    print("I can count how many obstacles are around me. Give my programmer an A+.")
  
     def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")

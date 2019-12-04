@@ -163,7 +163,14 @@ class Piggy(PiggyParent):
                 print("I have a clear view. Resetting my counter")
         self.stop()
         print("I found this many things: %d" % count)
-        return count 
+        return count
+
+    def hold_position(self):
+        start_angle = self.get_heading()
+        while True:
+            time.sleep(.10)
+            if self.get_heading() != start_angle:
+                self.turn_to_deg(start_angle)
 
     def quick_check(self):
         #3 quick checks
@@ -172,9 +179,7 @@ class Piggy(PiggyParent):
             if self.read_distance() < self.SAFE_DIST:
                 return False
             #if i get to the ned, i found nothing dangerous
-        return True
-    
-
+            else True
            
         
        

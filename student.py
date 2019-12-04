@@ -39,7 +39,8 @@ class Piggy(PiggyParent):
                 "d": ("Dance", self.dance),
                 "o": ("Obstacle count", self.obstacle_count),
                 "c": ("Calibrate", self.calibrate),
-                "q": ("Quit", self.quit)
+                "q": ("Quit", self.quit),
+                "h": ("return to position", self.hold_position)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):

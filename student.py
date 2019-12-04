@@ -179,7 +179,7 @@ class Piggy(PiggyParent):
             if self.read_distance() < self.SAFE_DIST:
                 return False
             #if i get to the ned, i found nothing dangerous
-            else True
+        return True
            
         
        

@@ -170,7 +170,7 @@ class Piggy(PiggyParent):
         start_angle = self.get_heading()
         while True:
             time.sleep(.10)
-            if abs(self.get_heading() - start_angle) > 16: 
+            if abs(self.get_heading() - start_angle) > 12: 
                 self.turn_to_deg(start_angle)
 
     def quick_check(self):

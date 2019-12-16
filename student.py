@@ -168,39 +168,39 @@ class Piggy(PiggyParent):
         return count
 
     def slither(self):
-       """practice a smooth veer"""
-    starting_direction + self.get_heading()
-    #start driving forwward
-    self.set_motor_power(self.MOTOR_LEFT, self.LEFT_DEFAULT)
-    self.set_motor_power(self.MOTOR_RIGHT, self.RIGHT_DEFAULT)
-    self.fwd()
-    #throttle down the left motor
-    for power in range(self.LEFT_DEFAULT, 30, -10):
-        self.set_motor_power(self.MOTOR_LEFT, power)
-        time.sleep(.5)
-   
-    #throttle up the left
-    for power in range(self.LEFT_DEFAULT, 30, -10):
-        self.set_motor_power(self.MOTOR_LEFT, power)
-        time.sleep(.1)
+        """practice a smooth veer"""
+        starting_direction + self.get_heading()
+        #start driving forwward
+        self.set_motor_power(self.MOTOR_LEFT, self.LEFT_DEFAULT)
+        self.set_motor_power(self.MOTOR_RIGHT, self.RIGHT_DEFAULT)
+        self.fwd()
+        #throttle down the left motor
+        for power in range(self.LEFT_DEFAULT, 30, -10):
+            self.set_motor_power(self.MOTOR_LEFT, power)
+            time.sleep(.5)
     
-   
-    #throttle down the right
-    for power in range(self.RIGHT_DEFAULT, 30, -10):
-        self.set_motor_power(self.MOTOR_RIGHT, power)
-        time.sleep(.5)
-   
-    #throttle up the right
-    for power in range(self.RIGHT_DEFAULT, 30, -10):
-        self.set_motor_power(self.MOTOR_RIGHT, power)
-        time.sleep(.1)
-
-    left_speed = self.LEFT_DEFAULT
-    right_speed = self.RIGHT_DEFAULT
-
-    self.set_motor_power(self.MOTOR_LEFT, self.LEFT_DEFAULT)
-    self.set_motor_power(self.MOTOR_RIGHT, self.RIGHT_DEFAULT)
+        #throttle up the left
+        for power in range(self.LEFT_DEFAULT, 30, -10):
+            self.set_motor_power(self.MOTOR_LEFT, power)
+            time.sleep(.1)
+        
     
+        #throttle down the right
+        for power in range(self.RIGHT_DEFAULT, 30, -10):
+            self.set_motor_power(self.MOTOR_RIGHT, power)
+            time.sleep(.5)
+    
+        #throttle up the right
+        for power in range(self.RIGHT_DEFAULT, 30, -10):
+            self.set_motor_power(self.MOTOR_RIGHT, power)
+            time.sleep(.1)
+
+        left_speed = self.LEFT_DEFAULT
+        right_speed = self.RIGHT_DEFAULT
+
+        self.set_motor_power(self.MOTOR_LEFT, self.LEFT_DEFAULT)
+        self.set_motor_power(self.MOTOR_RIGHT, self.RIGHT_DEFAULT)
+        
     #straighten out
     while self.get_heading() != starting_direction:
         #if I need to veer right

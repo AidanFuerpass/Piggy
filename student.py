@@ -169,7 +169,7 @@ class Piggy(PiggyParent):
 
     def slither(self):
         """practice a smooth veer"""
-        starting_direction + self.get_heading()
+        starting_direction = self.get_heading()
         #start driving forwward
         self.set_motor_power(self.MOTOR_LEFT, self.LEFT_DEFAULT)
         self.set_motor_power(self.MOTOR_RIGHT, self.RIGHT_DEFAULT)

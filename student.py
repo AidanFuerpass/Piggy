@@ -210,7 +210,7 @@ class Piggy(PiggyParent):
         elif self.get_heading() > starting_direction:
             left_speed -= 10
         self.set_motor_power(self.MOTOR_LEFT, left_speed)
-        self.set_motor_power(self.MOTOR_RIGHT, right speed)
+        self.set_motor_power(self.MOTOR_RIGHT, right_speed)
         time.sleep(.1)
   
   
